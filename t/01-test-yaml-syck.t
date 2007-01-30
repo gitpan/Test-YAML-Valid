@@ -7,9 +7,15 @@ use warnings;
 
 use FindBin;
 use File::Spec::Functions;
+use Test::More;
 
-use Test::More tests => 7;
-use Test::YAML::Valid;
+BEGIN {
+    plan skip_all => 'YAML::Syck required to test with YAML::Syck'
+      unless eval "require YAML::Syck";
+}
+
+use Test::YAML::Valid qw(-Syck);
+plan tests => 7;
 
 my $yaml =<<'YAML';
 baz:
