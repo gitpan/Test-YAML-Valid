@@ -38,11 +38,11 @@ Test::YAML::Valid - Test for valid YAML
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -92,8 +92,7 @@ and fail otherwise.  Returns the result of loading the YAML.
 sub _is_undef_yaml($){
     my $yaml = shift;
     return if !defined $yaml;
-    
-    return 1 if $yaml =~ /^(?:---(?:\s+~?)?\s+)+\n$/;
+    return 1 if $yaml =~ /^(?:---(?:\s+~?)?\s+)+$/m;
     # XXX: ... should be OK: 
     #/^(?:---)?(?: ~)?\n+(?:[.][.][.]\n+)?$/;
     

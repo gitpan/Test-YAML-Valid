@@ -14,6 +14,7 @@ requires('Exporter');
 requires('Test::Builder');
 
 build_requires('Test::More');
+build_requires('Test::Builder::Tester');
 build_requires('File::Spec');
 
 feature('YAML::Syck' => ['YAML::Syck' => '0.60']);
