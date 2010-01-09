@@ -1,5 +1,4 @@
 Changes
-inc/ExtUtils/AutoInstall.pm
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
@@ -13,14 +12,18 @@ inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Test/YAML/Valid.pm
 Makefile.PL
-MANIFEST
-META.yml			# Will be created by "make dist"
+MANIFEST			This list of files
+META.yml
 README
 t/00-load.t
 t/01-test-yaml-syck.t
+t/01-test-yaml-tiny.t
+t/01-test-yaml-xs.t
 t/01-test-yaml.t
 t/02-test-yaml-output.t
 t/02-test-yaml-syck-output.t
+t/02-test-yaml-tiny-output.t
+t/02-test-yaml-xs-output.t
 t/boilerplate.t
 t/pod-coverage.t
 t/pod.t
